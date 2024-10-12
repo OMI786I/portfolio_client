@@ -1,6 +1,42 @@
-import React from "react";
+import {
+  FcCommandLine,
+  FcDocument,
+  FcEditImage,
+  FcGlobe,
+} from "react-icons/fc";
 
 const Services = () => {
+  const services = [
+    {
+      id: 1,
+      name: "Web Development",
+      description:
+        "Building responsive and scalable websites using modern technologies like HTML, CSS, JavaScript, React, and backend technologies like Node.js and Express.",
+      icon: <FcCommandLine />,
+    },
+    {
+      id: 2,
+      name: "Web Design",
+      description:
+        "Designing visually appealing, user-friendly, and modern web layouts, including UI/UX design, prototyping, and wireframing using tools like Figma, Adobe XD, and Sketch.",
+      icon: <FcGlobe />,
+    },
+    {
+      id: 3,
+      name: "Graphic Design",
+      description:
+        "Creating unique and professional graphics for brands, including logos, brochures, banners, and social media graphics using Adobe Photoshop, Illustrator, and InDesign.",
+      icon: <FcEditImage />,
+    },
+    {
+      id: 4,
+      name: "Technical Writing",
+      description:
+        "Providing detailed and clear technical documentation, user manuals, API documentation, and tutorials for software products and services.",
+      icon: <FcDocument />,
+    },
+  ];
+
   return (
     <div className="my-12">
       <div className="flex justify-around items-center">
@@ -81,6 +117,28 @@ const Services = () => {
         </h1>
 
         <p className="text-2xl text-center">These are the services I offer</p>
+        <div className="grid grid-cols-2 gap-5 my-6 p-5">
+          {" "}
+          {services.map((res) => (
+            <div
+              key={res.id}
+              className="max-w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 
+                       hover:bg-green-600 group transition duration-300"
+            >
+              <span className="text-7xl group-hover:text-white transition duration-300">
+                {" "}
+                {res.icon}
+              </span>
+              <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white group-hover:text-white transition duration-300">
+                {res.name}
+              </h5>
+
+              <p className="mb-3 font-normal text-gray-500 dark:text-gray-400 group-hover:text-white transition duration-300">
+                {res.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
