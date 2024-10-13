@@ -43,7 +43,7 @@ const ContactForm = () => {
 
   return (
     <div className="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg">
-      <h1 className="text-5xl text-center font-bold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent my-6 p-3">
+      <h1 className=" text-3xl md:text-5xl text-center font-bold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent my-6 p-3">
         Contact Me
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

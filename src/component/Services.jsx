@@ -39,8 +39,8 @@ const Services = () => {
 
   return (
     <div className="my-12">
-      <div className="flex justify-around items-center">
-        <h1 className=" p-2 text-5xl text-center font-bold bg-gradient-to-r from-green-900 to-green-400 bg-clip-text text-transparent my-6">
+      <div className="flex flex-col md:flex-row justify-around items-center">
+        <h1 className=" p-2 text-3xl lg:text-5xl text-center font-bold bg-gradient-to-r from-green-900 to-green-400 bg-clip-text text-transparent my-6">
           Here is what I am good at
         </h1>
 
@@ -112,12 +112,11 @@ const Services = () => {
         </div>
       </div>
       <div className="mt-32">
-        <h1 className=" p-2 text-5xl text-center font-bold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent my-6">
+        <h1 className=" p-2 text-3xl md:text-5xl text-center font-bold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent my-6">
           My Quality Services
         </h1>
 
-        <p className="text-2xl text-center">These are the services I offer</p>
-        <div className="grid grid-cols-2 gap-5 my-6 p-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-6 p-5">
           {" "}
           {services.map((res) => (
             <div

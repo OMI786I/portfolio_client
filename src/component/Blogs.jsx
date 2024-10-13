@@ -42,11 +42,11 @@ const Blogs = () => {
   } else
     return (
       <div className="p-5">
-        <h1 className="text-5xl text-center font-bold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent my-6 p-3">
+        <h1 className=" text-3xl md:text-5xl text-center font-bold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent my-6 p-3">
           Recent Blogs
         </h1>
 
-        <p className="text-2xl">
+        <p className="md:text-2xl">
           As a blog writer, I share insights and knowledge with a global
           audience, educating and inspiring readers. Blogging helps you build
           connections, offer value, and grow as a thought leader while shaping

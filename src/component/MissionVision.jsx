@@ -4,11 +4,11 @@ import { BsBullseye } from "react-icons/bs";
 const MissionVision = () => {
   return (
     <div className="mx-4">
-      <h1 className="text-5xl text-center font-bold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent my-6 p-3">
+      <h1 className="text-3xl md:text-5xl text-center font-bold bg-gradient-to-r from-green-400 to-green-900 bg-clip-text text-transparent my-6 p-3">
         My Mission and vision
       </h1>
 
-      <div className="grid grid-cols-2 gap-3 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
         <div className="bg-green-600  p-10 rounded-xl relative overflow-hidden -z-20">
           <h1 className="text-3xl text-white">My</h1>
           <h1 className="text-4xl text-green-800 my-1 font-bold">Vision</h1>

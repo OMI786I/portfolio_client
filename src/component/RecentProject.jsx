@@ -12,7 +12,7 @@ const RecentProject = () => {
   return (
     <div className="p-5">
       <div>
-        <h1 className="text-5xl text-center font-bold bg-gradient-to-r from-green-900 to-green-400 bg-clip-text text-transparent my-6 p-3">
+        <h1 className="text-3xl md:text-5xl text-center font-bold bg-gradient-to-r from-green-900 to-green-400 bg-clip-text text-transparent my-6 p-3">
           My recent projects
         </h1>
 
