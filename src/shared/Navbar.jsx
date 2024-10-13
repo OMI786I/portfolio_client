@@ -94,8 +94,17 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
+
         <div className="navbar-end">
-          <a className="btn btn-success text-white">Hire me</a>
+          <Link
+            to="contactSection"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer"
+          >
+            {" "}
+            <button className="btn btn-success text-white">Hire me</button>
+          </Link>
         </div>
       </div>
     </div>

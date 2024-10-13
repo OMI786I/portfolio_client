@@ -5,7 +5,7 @@ import { LiaLinkedin } from "react-icons/lia";
 import { Link } from "react-router-dom";
 const Banner = () => {
   return (
-    <div className="px-20">
+    <div className="px-20 pt-24 grid grid-cols-2 items-center justify-center ">
       <div>
         <h3 className="text-3xl font-bold text-green-950">I am Omi</h3>
         <h1 className="text-7xl font-bold bg-gradient-to-r from-green-900 to-green-400 bg-clip-text text-transparent my-6">
@@ -54,7 +54,9 @@ const Banner = () => {
           </Link>
         </div>
       </div>
-      <div></div>
+      <div className="hover:rotate-3 duration-150 justify-self-center ">
+        <img src="/assets/banner_image.png" className="rounded-xl"></img>
+      </div>
     </div>
   );
 };
