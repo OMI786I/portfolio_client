@@ -9,12 +9,24 @@ import ContactForm from "../component/ContactForm";
 const Home = () => {
   return (
     <div>
-      <Banner />
-      <Services />
-      <RecentProject />
-      <MissionVision />
-      <Blogs />
-      <ContactForm />
+      <div id="bannerSection">
+        <Banner />
+      </div>
+      <div id="servicesSection">
+        <Services />
+      </div>
+      <div id="recentProjectSection">
+        <RecentProject />
+      </div>
+      <div id="missionVisionSection">
+        <MissionVision />
+      </div>
+      <div id="blogsSection">
+        <Blogs />
+      </div>
+      <div id="contactSection">
+        <ContactForm />
+      </div>
     </div>
   );
 };

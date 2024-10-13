@@ -1,6 +1,67 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
+  const navLink = (
+    <div className=" flex gap-4  ">
+      <Link
+        to="servicesSection"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer"
+      >
+        <button className="border-b p-2 duration-200 hover:border-b-green-600 ">
+          Services
+        </button>
+      </Link>
+
+      <Link
+        to="recentProjectSection"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer"
+      >
+        <button className="border-b p-2 duration-200 hover:border-b-green-600 ">
+          Recent Projects
+        </button>
+      </Link>
+
+      <Link
+        to="missionVisionSection"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer"
+      >
+        <button className="border-b p-2 duration-200 hover:border-b-green-600 ">
+          Mission & Vision
+        </button>
+      </Link>
+
+      <Link
+        to="blogsSection"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer"
+      >
+        <button className="border-b p-2 duration-200 hover:border-b-green-600 ">
+          Blogs
+        </button>
+      </Link>
+
+      <Link
+        to="contactSection"
+        smooth={true}
+        duration={500}
+        className="cursor-pointer"
+      >
+        <button className="border-b p-2 duration-200 hover:border-b-green-600 ">
+          Contact
+        </button>
+      </Link>
+    </div>
+  );
+
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -26,52 +87,15 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              {navLink}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn btn-success text-white">Hire me</a>
         </div>
       </div>
     </div>

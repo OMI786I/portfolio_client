@@ -1,11 +1,18 @@
 // ContactForm.js
+import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { BiHome } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { PiPhone } from "react-icons/pi";
-
+import Swal from "sweetalert2";
+import { animateScroll as scroll } from "react-scroll";
+import { AiOutlineArrowUp } from "react-icons/ai";
 const ContactForm = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   const {
     register,
     handleSubmit,
@@ -14,6 +21,24 @@ const ContactForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+
+    axios
+      .post("http://localhost:5000/contact", data)
+      .then((response) => {
+        if (response.data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Thanks for your feedback",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -156,6 +181,16 @@ const ContactForm = () => {
             <BiHome className="text-3xl text-green-600" />
             <span className="text-lg">Azimpur, Dhaka, Bangladesh</span>
           </div>
+        </div>
+      </div>
+      <div className="flex justify-end">
+        <div className="tooltip  " data-tip="On Top!">
+          <button
+            onClick={scrollToTop}
+            className="border rounded-full p-2 hover:bg-green-600 hover:text-white duration-200"
+          >
+            <AiOutlineArrowUp className="text-3xl" />
+          </button>
         </div>
       </div>
     </div>
