@@ -88,7 +88,7 @@ const Blogs = () => {
               >
                 {data
                   ? data.map((res) => (
-                      <Link key={res._id} to={"/"}>
+                      <Link key={res._id} to={`/blogs/${res._id}`}>
                         <div className=" lg:w-[300px] xl:w-[400px] rounded-xl border p-3">
                           <div className="overflow-hidden">
                             <img
